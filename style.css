@@ -164,7 +164,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 1px;
-    z-index: 1;
+    z-index: 1; 
     overflow: hidden;
     transition: 0.5s;
 }
@@ -175,7 +175,7 @@ body {
 
 .btn-box a:nth-child(2) {
     background: transparent;
-    color: #00abf0;
+    color: #00abf0; 
 }
 
 .btn-box a:nth-child(2):hover {
@@ -194,6 +194,18 @@ body {
     width: 0;
     height: 100%;
     background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:nth-child(2):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
     z-index: -1;
     transition: .5s;
 }
