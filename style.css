@@ -22,7 +22,7 @@ body {
     background-color: transparent;
     display: flex;
     justify-content: space-between;
-
+    z-index: 100;
 }
 
 .logo {
@@ -214,12 +214,13 @@ body {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     background: #081b29;
     animation: showRight 1s ease forwards;
-    animation-delay: 2.5s;
+    animation-delay: 3.5s;
+    z-index: 2;
 }
 
 .home-sci a {
@@ -265,7 +266,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 800px;
+    width: 48.5%;
     height: 100%;
     background: transparent;
     transition: 3s;
@@ -279,17 +280,17 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 120%;
+    width: 100%;
     height: 100%;
     background: #081b29;
     animation: showRight 1s ease forwards;
     animation-delay: 3s;
-    z-index: 100;
 }
 
 .home-imgHover:hover {
     background: #081b29;
     opacity: .8;
+    
 }
 
 
