@@ -407,6 +407,20 @@ section {
 
 .footer-text p {
     font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.footer-text p a {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.footer-text p a:hover{
+    color: var(--main-color);
 }
 
 .footer-iconTop a{
