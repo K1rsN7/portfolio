@@ -715,9 +715,6 @@ section:nth-child(odd) .animate.scroll,
         margin-top: 2rem;
         text-align: center;
     }
-}
-
-@media (max-width: 462px){
     .home {
         justify-content: center;
     }
@@ -732,8 +729,6 @@ section:nth-child(odd) .animate.scroll,
     .home-content h1 {
         font-size: 5rem;
     }
-<<<<<<< Updated upstream
-=======
 
     .portfolio h2 {
         margin-bottom: 3rem;
@@ -751,7 +746,6 @@ section:nth-child(odd) .animate.scroll,
         margin-top: 2rem;
         text-align: center;
     }
->>>>>>> Stashed changes
 }
 
 /* KEYFRAMES ANIMATION  */
