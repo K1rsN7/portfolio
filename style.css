@@ -388,6 +388,84 @@ section {
     background: var(--second-bg-color);
 }
 
+.portfolio {
+    background-color: var(--bg-color);
+}
+
+.portfolio h2 {
+    margin-bottom: 4rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--second-bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio-box img {
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0.7;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+    font-size: 3rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--text-color);
+    border-radius: 50%;
+}
+
+.portfolio-layer a i {
+    font-size: 2.4em;
+    color: var(--bg-color);
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -433,7 +511,6 @@ section {
 
 .footer-iconTop a:hover::before {
     width: 100%;
-
 }
 
 .footer-iconTop a i {
@@ -464,7 +541,8 @@ section {
 .logo .animate, 
 .navbar .animate, 
 #menu-icon .animate, 
-.home.show-animate .animate {
+.home.show-animate .animate
+    {
     animation: showRight 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
 }
@@ -480,7 +558,8 @@ section:nth-child(odd) .animate.scroll,
 }
 
 .about.show-animate .animate.scroll,
-.footer.show-animate .animate.scroll {
+.portfolio.show-animate .animate.scroll,
+.footer.show-animate .animate.scroll{
     transition-delay: calc(.3s * var(--i));
     width: 0;
 }
@@ -503,6 +582,10 @@ section:nth-child(odd) .animate.scroll,
 
     .home {
         padding: 0 4%;
+    }
+
+    .portfolio {
+        padding-bottom: 7rem;
     }
 
     .footer {
@@ -580,6 +663,14 @@ section:nth-child(odd) .animate.scroll,
         background-color: var(--bg-color);
         opacity: .6;
     }
+
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 520px) {
@@ -641,6 +732,26 @@ section:nth-child(odd) .animate.scroll,
     .home-content h1 {
         font-size: 5rem;
     }
+<<<<<<< Updated upstream
+=======
+
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        margin-top: 2rem;
+        text-align: center;
+    }
+>>>>>>> Stashed changes
 }
 
 /* KEYFRAMES ANIMATION  */
