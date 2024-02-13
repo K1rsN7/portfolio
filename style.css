@@ -65,6 +65,9 @@ body {
     animation-delay: .4s;
 }
 
+span {
+    color: var(--main-color);
+}
 
 .navbar a{
     font-size: 1.7rem;
@@ -472,7 +475,7 @@ section {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
 }
 
 .footer-text,
@@ -482,6 +485,20 @@ section {
 
 .footer-text p {
     font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.footer-text p a {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.footer-text p a:hover{
+    color: var(--main-color);
 }
 
 .footer-iconTop a{
@@ -694,27 +711,7 @@ section:nth-child(odd) .animate.scroll,
 
 }
 
-@media (max-width: 462px) {
-    .home-content h1 {
-        font-size: 5.2rem;
-    }
-    
-    /* .education {
-        padding: 10rem 4% 5rem 5%;
-    } */
-
-    /* .concat form .iput-box .iput-field {
-        width: 100%;
-    } */
-
-    .footer {
-        flex-direction: column-reverse;
-    }
-
-    .footer p {
-        margin-top: 2rem;
-        text-align: center;
-    }
+@media (max-width: 462px){
     .home {
         justify-content: center;
     }
@@ -725,6 +722,26 @@ section:nth-child(odd) .animate.scroll,
         flex-direction: column;
         text-align: center;
     }
+
+    .home.show-animate .home-content .text-animate h3::before {
+        padding-left: 5.8rem;
+        animation: homeCursorText 6s linear infinite;
+        animation-delay: 2s;
+    }
+
+    .home.show-animate .home-content .text-animate h3 {
+        animation: homeBgTextSmartfone 6s linear infinite;
+        animation-delay: 2s;
+    }
+
+
+     /* .education {
+        padding: 10rem 4% 5rem 5%;
+    } */
+
+    /* .concat form .iput-box .iput-field {
+        width: 100%;
+    } */
 
     .home-content h1 {
         font-size: 5rem;
@@ -762,6 +779,26 @@ section:nth-child(odd) .animate.scroll,
 }
 
 /* new */
+@keyframes homeBgText {
+    0%, 10%, 100% {
+        background-position: -33rem 0;
+    }
+
+    65%, 85% {
+        background-position: -11rem 0;
+    }
+}
+
+@keyframes homeBgTextSmartfone {
+    0%, 10%, 100% {
+        background-position: -27rem 0;
+    }
+
+    65%, 85% {
+        background-position: -5.8rem 0;
+    }
+}
+
 @keyframes homeBgText {
     0%, 10%, 100% {
         background-position: -33rem 0;
