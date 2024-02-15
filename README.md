@@ -9,5 +9,6 @@
 <h3>What blocks are in development:</h3>
 <ul>
   <li>Skills</li>
+  <li>Events</li>
   <li>Contact</li>
 </ul>
