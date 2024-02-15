@@ -118,7 +118,7 @@ section {
 }
 
 .home-content h1 span {
-    color: var(--text-color);
+    color: var(--main-color);
 }
 
 .home-content h1::before {
@@ -695,10 +695,10 @@ section:nth-child(odd) .animate.scroll,
         font-size: 50%;
     }
 
-    .home-content h1 {
+    /* .home-content h1 {
         display: flex;
         flex-direction: column;
-    }
+    } */
 
     .home-sci {
         width: 160px;
@@ -714,7 +714,26 @@ section:nth-child(odd) .animate.scroll,
 @media (max-width: 462px){
     .home {
         justify-content: center;
+        background: url('assets/img/phone-background.png') no-repeat;
+        background-size: cover;
+        background-position: center;
     }
+
+    .home-imgHover {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        transition: 3s;
+        opacity: .75;
+    }
+
+    .animate.home-img {
+        width: 100%;
+    }
+    
 
     .home-content {
         display: flex;
@@ -722,6 +741,7 @@ section:nth-child(odd) .animate.scroll,
         flex-direction: column;
         text-align: center;
     }
+
 
     .home.show-animate .home-content .text-animate h3::before {
         padding-left: 5.8rem;
