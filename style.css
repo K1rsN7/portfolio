@@ -188,7 +188,7 @@ section {
     height: 5rem;
 }
 
-.btn-box a {
+.btn-box a, .btn-box button {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -208,7 +208,7 @@ section {
     transition: 0.5s;
 }
 
-.btn-box a:hover{
+.btn-box a:hover, .btn-box button:hover{
     color: var(--main-color);
 }
 
@@ -225,7 +225,7 @@ section {
     background: var(--main-color);
 }
 
-.btn-box a::before {
+.btn-box a::before, .btn-box button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -249,7 +249,7 @@ section {
     transition: .5s;
 }
 
-.btn-box a:hover::before {
+.btn-box a:hover::before, .btn-box button:hover::before {
     width: 100%;
 }
 
@@ -382,15 +382,16 @@ section {
     margin: 2rem 0 3rem;
 }
  
-.btn-box.btns {
+.btn-box.btns, .btn-box button {
     display: inline-block;
     width: 15rem;
 }
 
-.btn-box.btns a::before {
+.btn-box.btns a::before, .btn-box button {
     background: var(--second-bg-color);
 }
 
+/* -------latest project-------- */
 .portfolio {
     background-color: var(--bg-color);
 }
@@ -469,6 +470,112 @@ section {
     color: var(--bg-color);
 }
 
+/* --------contact-------- */
+.contact {
+    background-color: var(--bg-color);
+}
+
+.contact .container {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    position: relative;
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.contact-left p i {
+    color: var(--main-color);
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    position: relative;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center; 
+}
+
+.social-icons a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.social-icons a:hover {
+    color: var(--bg-color);
+}
+
+.social-icons a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+    /* overflow: hidden; */
+}
+
+.social-icons a:hover::before {
+    width: 100%;
+}
+
+
+.btn.btn2 {
+    display: inline-block;
+    background: var(--main-color);
+}
+
+.contact-right form {
+    align-content: right;
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: var(--second-bg-color);
+    padding: 15px;
+    margin: 15px 0;
+    color: var(--text-color);
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+/* form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+} */
+
+/* --------footer-------- */
 .footer {
     display: flex;
     justify-content: space-between;
