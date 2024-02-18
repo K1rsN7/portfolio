@@ -95,11 +95,13 @@ section {
     padding: 10rem 9% 2rem;
 }
 
+/* -------home-------- */
 .home {
     display: flex;
     align-items: center;
     padding: 0 9%;
     background: url('assets/img/home.png') no-repeat;
+    background-attachment: fixed; 
     background-size: cover;
     background-position: center;
 }
@@ -144,7 +146,7 @@ section {
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: .7px var(--main-color);
-    background-image: linear-gradient(var(--main-color), var(--main-color));
+    background-image: linear-gradient(var(--main-color), var(--main-color));  
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -33rem 0 ;
@@ -188,7 +190,7 @@ section {
     height: 5rem;
 }
 
-.btn-box a {
+.btn-box a, .btn-box button {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -208,7 +210,7 @@ section {
     transition: 0.5s;
 }
 
-.btn-box a:hover{
+.btn-box a:hover, .btn-box button:hover{
     color: var(--main-color);
 }
 
@@ -225,7 +227,7 @@ section {
     background: var(--main-color);
 }
 
-.btn-box a::before {
+.btn-box a::before, .btn-box button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -249,7 +251,7 @@ section {
     transition: .5s;
 }
 
-.btn-box a:hover::before {
+.btn-box a:hover::before, .btn-box button:hover::before {
     width: 100%;
 }
 
@@ -273,7 +275,6 @@ section {
     border-radius: 50%;
     font-size: 20px;
     color: var(--main-color);
-    /* text-decoration: none; */
     z-index: 1;
     overflow: hidden;
     transition: .5s;
@@ -316,7 +317,7 @@ section {
     opacity: .8;
 }
 
-
+/* -------about me-------- */
 .about {
     display: flex;
     justify-content: center;
@@ -381,16 +382,18 @@ section {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
+
  
-.btn-box.btns {
+.btn-box.btns, .btn-box button {
     display: inline-block;
     width: 15rem;
 }
 
-.btn-box.btns a::before {
+.btn-box.btns a::before{
     background: var(--second-bg-color);
 }
 
+/* -------latest project-------- */
 .portfolio {
     background-color: var(--bg-color);
 }
@@ -469,13 +472,112 @@ section {
     color: var(--bg-color);
 }
 
+/* --------contact-------- */
+.contact {
+    /* height: auto; */
+    align-items: center;
+    padding-top: 25rem;
+    background: var(--second-bg-color);
+}
+
+.contact h2 {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field,
+.contact form .textarea-field {
+    z-index: 0;
+}
+
+.contact form .input-box .input-field{
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+
+.contact form .input-box .input-field input::placeholder,
+.contact form .textarea-field textarea::placeholder {
+    color: var(--text-color);
+}
+
+.contact form .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s;
+}
+
+.contact form .input-box .input-field input:focus~.focus,
+.contact form .input-box .input-field input:valid~.focus,
+.contact form .textarea-field textarea:focus~.focus,
+.contact form .textarea-field textarea:valid~.focus{
+    animation: showRightContact 1s ease forwards;
+    background: var(--main-color);
+    width: 0;
+}
+
+.contact form .textarea-field {
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+
+.contact form .textarea-field textarea {
+    resize: none;
+}
+
+.contact form .btn-box.btns .btn {
+    cursor: pointer;
+}
+
+#msg {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+/* --------footer-------- */
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background-color: var(--bg-color);
 }
 
 .footer-text,
@@ -558,8 +660,8 @@ section {
 .logo .animate, 
 .navbar .animate, 
 #menu-icon .animate, 
-.home.show-animate .animate
-    {
+.home.show-animate .animate,
+.contact.show-animate .animate {
     animation: showRight 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
 }
@@ -569,13 +671,13 @@ section {
     transition-delay: calc(.3s / var(--i));
 }
 
-section:nth-child(odd) .animate.scroll,
-.footer animate.scroll {
+section:nth-child(odd) .animate.scroll{
     background: var(--second-bg-color);
 }
 
 .about.show-animate .animate.scroll,
 .portfolio.show-animate .animate.scroll,
+.contact.show-animate animate.scroll,
 .footer.show-animate .animate.scroll{
     transition-delay: calc(.3s * var(--i));
     width: 0;
@@ -754,15 +856,6 @@ section:nth-child(odd) .animate.scroll,
         animation-delay: 2s;
     }
 
-
-     /* .education {
-        padding: 10rem 4% 5rem 5%;
-    } */
-
-    /* .concat form .iput-box .iput-field {
-        width: 100%;
-    } */
-
     .home-content h1 {
         font-size: 5rem;
     }
@@ -773,6 +866,10 @@ section:nth-child(odd) .animate.scroll,
 
     .portfolio-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact form .input-box .input-field {
+        width: 100%;
     }
 
     .footer {
@@ -792,13 +889,18 @@ section:nth-child(odd) .animate.scroll,
     }
 }
 
+@keyframes showRightContact {
+    100% {
+        width: 100%;
+    }
+}
+
 @keyframes manipActiveHover {
     100% {
         pointer-events: auto;
     }
 }
 
-/* new */
 @keyframes homeBgText {
     0%, 10%, 100% {
         background-position: -33rem 0;

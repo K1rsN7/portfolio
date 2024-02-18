@@ -22,8 +22,8 @@
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#portfolio">Portfolio</a>
-            <!-- <a href="#services">Services</a>
-            <a href="#contact">Contact</a> -->
+            <!-- <a href="#services">Skills</a> -->
+            <a href="#contact">Contact</a>
             <span class="active-nav"></span>
             <span class="animate" style="--i:2;"></span>
         </nav>
@@ -74,7 +74,7 @@
             </p>
 
             <div class="btn-box btns">
-                <a href="assets/resume.pdf" class="btn">View Resume</a>
+                <a href="assets/resume.pdf" download class="btn">View Resume</a>
                 <span class="animate scroll" style="--i:5;"></span>
             </div>
         </div>
@@ -147,6 +147,48 @@
         </div>
    </section>
 
+   <!-- contact design -->
+   <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span><span class="animate scroll" style="--i:1;"></span></h2>
+        <form class="submit-to-google-sheet">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" name="Name" placeholder="Full Name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="email" name="Email" placeholder="Email Address" required>
+                    <span class="focus"></span>
+                </div>
+                <span class="animate scroll" style="--i:2;"></span>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" name="Phone" placeholder="Mobile Number" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="Subject" placeholder="Email Subject" required>
+                    <span class="focus"></span>
+                </div>
+                <span class="animate scroll" style="--i:3;"></span>
+            </div>
+
+            <div class="textarea-field">
+                <textarea name="" id="" cols="30" rows="10" name="Message" placeholder="Your Message" required></textarea>
+                <span class="focus"></span>
+                <span class="animate scroll" style="--i:4;"></span>
+            </div>
+
+            <div class="btn-box btns" align="center">
+                <button type="submit" class="btn">Submit</button>
+                <span class="animate scroll" style="--i:5;"></span>
+            </div>
+        </form>
+        <span id="msg"></span>
+   </section>
+
     <!-- footer design -->
     <footer class="footer">
         <div class="footer-text">
@@ -159,7 +201,6 @@
             <span class="animate scroll" style="--i:3;"></span>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
