@@ -473,8 +473,7 @@ section {
 }
 
 /* --------contact-------- */
-.contact {
-    /* height: auto; */
+/* .contact {
     align-items: center;
     padding-top: 25rem;
     background: var(--second-bg-color);
@@ -569,7 +568,7 @@ section {
     align-items: center;
     align-content: center;
     text-align: center;
-}
+} */
 
 /* --------footer-------- */
 .footer {
