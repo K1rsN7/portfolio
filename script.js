@@ -47,3 +47,21 @@ window.onscroll = () => {
 
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
+
+// contact me
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzOwYslGDqisaJsJtm_MEVW3lUZxMr0XBFP5tyR3VW59mcq0tDJ4n9WZArBl6mXz8fs/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        }, 5000)
+        form.reset()
+    })
+    .catch(error => console.error('Error!', error.message))
+})
