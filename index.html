@@ -1,206 +1,1281 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Kirill Sukhorukov's portfolio</title>
-</head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Kirill Sukhorukov - Portfolio</title>
+    <meta property="og:title" content="Kirill Sukhorukov - Portfolio" />
+    <meta property="og:image" content="./assets/images/logo.png" />
+    <!--
+      - favicon
+    -->
+    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+  
+    <!--
+      - custom css link
+    -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+  
+    <!--
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+    <!-- Google Analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1H2WJ7XH4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-G1H2WJ7XH4');
+    </script>
+  
+  </head>
+  
+
 <body>
 
-    
-    <!-- header design -->
-    <header class="header">
-        <a href="#" class="logo"><span>K</span>1rsN7.<span class="animate" style="--i:1;"></span></a>
+  <!--
+    - #MAIN
+  -->
 
-        <div class='bx bx-menu' id="menu-icon">
-            <span class="animate" style="--i:2;"></span>
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/avatar.jpg" alt="Kirill Sukhorukov">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Kirill Sukhorukov">Kirill Sukhorukov</h1>
+
+          <p class="title notranslate" id="motto"></p>
         </div>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <!-- <a href="#services">Skills</a> -->
-            <!-- <a href="#contact">Contact</a> -->
-            <span class="active-nav"></span>
-            <span class="animate" style="--i:2;"></span>
-        </nav>
-    </header>
+        <button class="info_more-btn" data-sidebar-btn>
+          <ion-icon name="swap-vertical"></ion-icon>
+        </button>
 
-    <section class="home show-animate" id="home">
-        <div class="home-content">
-            <h1>Hi, I'm <span>Kirill</span> Sukhorukov<span class="animate" style="--i:2;"></span></h1>
-            <div class="text-animate">
-                <h3>Data Scientist</h3>
-                <span class="animate" style="--i:3;"></span>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="hourglass"></ion-icon>
             </div>
-            <p>I have been actively studying Data Science for more than 2 years. Currently, I am closely involved in the study of neural networks. I am TeamLead and head  Data Scientist of the team, with which I actively participate in various hackathons, championships, conferences, mitaps, as well as develop joint projects.</p>
-            <span class="animate" style="--i:4;"></span>
-            <!-- <div class="btn-box">
-                <a href="#">Hire Me</a>
-                <a href="#">Let's Talk</a>
-                <span class="animate" style="--i:5;"></span>
-            </div> -->
-        </div>
+            <div class="contact-info">
+              <p class="contact-title">Age</p>
+              <time id="age" class="counting-animation"></time>
+            </div>
+          </li>
 
-        <div class="home-sci">
-            <a href="https://github.com/K1rsN7"><i class="bx bxl-github"></i></a>
-            <a href="https://www.kaggle.com/k1rsn7"><i class="bx bxl-kickstarter"></i></a>
-            <a href="https://t.me/K1rsN7"><i class="bx bxl-telegram"></i></a>
-            <a href="https://vk.com/k1rsn7"><i class="bx bxl-vk"></i></a>
-            <span class="animate" style="--i:6;"></span>
-        </div>
-        <span class="home-imgHover"></span>
-        <span class="animate home-img" style="--i:7;"></span>
-    </section>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-sharp"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Nizhny Novgorod, Russia</address>
+            </div>
+          </li>
 
-    <!-- about section design -->
-    <section class="about " id="about">
-        <h2 class="heading">About <span>Me</span><span class="animate scroll" style="--i:1;"></span></h2>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="person-sharp"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Personality Type</p>
+              <address>INTJ-T</address>
+            </div>
+          </li>
 
-        <div class="about-img">
-            <img src="assets/img/about.png" alt="">
-            <span class="circle-spin"></span><span class="animate scroll" style="--i:2;"></span>
-        </div>
+        </ul>
 
-        <div class="about-content">
-            <h3>Data Scientist!<span class="animate scroll" style="--i:3;"></span></h3>
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/K1rsN7" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://t.me/K1rsN7" class="social-link">
+              <ion-icon name="paper-plane-outline"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://vk.com/k1rsn7" class="social-link">
+              <ion-icon name="logo-vk"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar notranslate">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Certificates</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <div class="modal-container" data-modal-container>
+        <div class="overlay" data-overlay></div>
+        <button class="modal-close-btn" data-modal-close-btn>
+        </button>
+      </div>
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+
+        <section class="about-text content-card">
+          <div id="expandable-section">
             <p>
-                Hi, I'm Kirill Sukhorukov, an 18-year-old Data Scientist from Nizhny Novgorod who has been actively studying Data Science for more than 2 years. Currently, I am closely involved in the study of neural networks.  In addition, I am a TeamLead and the head Data Scientist of the team, with which I actively participate in various hackathons, championships, conferences, meetups, as well as develop joint projects. <br>
-                I am a fast learner, able to acquire new skills and can easily handle multiple projects. I strive to develop expertise in multiple areas throughout my life and career. <br> I am a goal-oriented, assertive and visionary person. I have a passion for gaining experience in various fields throughout my life and career. 
-                <span class="animate scroll" style="--i:4;"></span>
+              Hello! &#128075  My name is Kirill, I'm from Nizhny Novgorod, Russia.
+              I am a novice Data Scientist who is passionate about everything related to artificial intelligence and machine learning. 
+              Since 2022, I have been actively immersing myself in the world of AI, and since 2020 I have been programming in Python. 
+              I am currently focusing on studying neural networks and their application in real-world projects.
             </p>
+            <div id="more" style="display: none;">
+              <p>
+                I am a TeamLead and the main Data Scientist in my team. Together, we actively participate in hackathons, championships, conferences and meetups, as well as develop joint projects. 
+                My experience working in a team helps me not only develop my technical skills, but also improve my leadership skills.
+              </p>
 
-            <div class="btn-box btns">
-                <a href="assets/resume.pdf" download class="btn">View Resume</a>
-                <span class="animate scroll" style="--i:5;"></span>
+              <p>
+                I'm a fast learner, I easily master new technologies, and I can effectively work on multiple projects at the same time. 
+                My goal is to develop expertise in various fields throughout my life and career. 
+                I am a purposeful, self-confident and visionary person who strives to gain new experience and put it into practice.
+              </p>
+              <p>
+                Besides, I'm a big Linux and open source software enthusiast. It helps me to understand more deeply how systems work and to find non-standard approaches to solving problems. 
+                I am also interested in automating processes, for example, I have set up my own smart home to make life more convenient and efficient.
+              </p>
+              <p>
+                I believe that AI and Data Science are the future, and I strive to be a part of this fascinating world. 
+                If you have any ideas or projects that you want to implement, let's discuss! I am always open to cooperation and ready to help bring your ideas to life.
+              </p>
             </div>
+          </div>
+          <center> <button class="more" id="toggle-button" onclick="toggleText()">&darr; &nbsp; &nbsp; Show more &nbsp;
+              &nbsp; &darr;</button> </center>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Primary Focus</h3>
+
+          <ul class="service-list">
+
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-ai.svg" alt="AI & ML Solutions" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">AI & ML Solutions</h4>
+
+                <p class="service-item-text">
+                  Development of intelligent solutions using artificial intelligence and machine learning.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-analystics.svg" alt="Data Analytics & Insights" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Analytics & Insights</h4>
+
+                <p class="service-item-text">
+                  Analyze data to extract valuable insights. Data visualization and report generation.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-automation.svg" alt="Automation & Smart Systems" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Automation & Smart Systems</h4>
+
+                <p class="service-item-text">
+                  Designing and implementing smart systems to increase convenience and efficiency.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-linux.svg" alt="marketing icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Linux & Open Source Expertise</h4>
+
+                <p class="service-item-text">
+                  Working with open source software and configuring Linux systems.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+          <br>
+
+
+          <br>
+
+          <!-- Languages -->
+
+          <!-- Programming Languages -->
+
+          <h3 class="h3 languages-title">Languages</h3>
+
+          <section class="languages content-card">
+
+            <div class="languages-column">
+
+              <h3 class="h3 languages-title-second">Coding Languages</h3>
+
+              <ul class="languages-list">
+
+                <li class="languages-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">Python</h5>
+                    <data value="95">95%</data>
+                  </div>
+
+                  <div class="languages-progress-bg">
+                    <div class="languages-progress-fill" style="width: 95%;"></div>
+                  </div>
+
+                </li>
+
+                <li class="languages-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">HTML & CSS</h5>
+                    <data value="75">75%</data>
+                  </div>
+
+                  <div class="languages-progress-bg">
+                    <div class="languages-progress-fill" style="width: 75%;"></div>
+                  </div>
+
+                </li>
+
+                <li class="languages-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">JavaScript</h5>
+                    <data value="15">15%</data>
+                  </div>
+
+                  <div class="languages-progress-bg">
+                    <div class="languages-progress-fill" style="width: 15%;"></div>
+                  </div>
+
+                </li>
+
+                <li class="languages-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">PHP</h5>
+                    <data value="10">10%</data>
+                  </div>
+
+                  <div class="languages-progress-bg">
+                    <div class="languages-progress-fill" style="width: 10%;"></div>
+                  </div>
+
+                </li>
+
+                <li class="languages-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">C#</h5>
+                    <data value="10">10%</data>
+                  </div>
+
+                  <div class="languages-progress-bg">
+                    <div class="languages-progress-fill" style="width: 10%;"></div>
+                  </div>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+            <!-- Human Languages -->
+            <div class="languages-column">
+
+              <h3 class="h3 languages-title-second">Human Languages</h3>
+
+              <ul class="languages-list">
+
+                <li class="languages-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">Russian</h5>
+                    <data value="Advanced">Advanced</data>
+                  </div>
+
+                  <div class="languages-progress-bg">
+                    <div class="languages-progress-fill" style="width: 100%;"></div>
+                  </div>
+
+                </li>
+
+                <li class="languages-item">
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">English</h5>
+                    <data value="elementary">Elementary</data>
+                  </div>
+
+                  <div class="languages-progress-bg">
+                    <div class="languages-progress-fill" style="width: 25%;"></div>
+                  </div>
+
+                </li>
+
+               </ul>
+
+            </div>
+
+          </section>
+
+          <br>
+
+          <!-- technologies -->
+
+          <h3 class="h3 technologies-title">Development Skills</h3>
+          <br>
+
+          <section class="technologies content-card" id="tech-skills">
+
+            <ul class="technologies-list has-scrollbar slider ">
+
+              <li class="technologies-item">
+                <img src="./assets/images/python.png" alt="Python" id="11">
+              </li>
+
+              <li class="technologies-item">
+                <img src="./assets/images/linux.png" alt="Linux" id="12">
+              </li>
+
+              <li class="technologies-item">
+                <img src="./assets/images/docker.png" alt="Docker" id="15">
+              </li>
+
+              <li class="technologies-item">
+                <img src="./assets/images/postgresql.svg" alt="PostgreSQL" id="14">
+              </li>
+              
+              <li class="technologies-item">
+                <img src="./assets/images/git.png" alt="Git" id="14">
+              </li>
+
+              <li class="technologies-item">
+                <img src="./assets/images/html.png" alt="HTML" id="1">
+              </li>
+
+              <li class="technologies-item">
+                <img src="./assets/images/css.png" alt="CSS" id="2">
+              </li>
+
+              <li class="technologies-item">
+                <img src="./assets/images/java-script.png" alt="JavaScript" id="3">
+              </li>
+
+              <li class="technologies-item">
+                <img src="./assets/images/php.png" alt="PHP" id="9">
+              </li>
+
+              <li class="technologies-item">
+                <img src="./assets/images/mysql.png" alt="MySQL" id="10">
+              </li>
+
+              <li class="technologies-item">
+                <img src="./assets/images/java.png" alt="Java" id="14">
+              </li>
+
+              <li class="technologies-item">
+                <img src="./assets/images/unity.png" alt="Unity" id="14">
+              </li>
+
+            </ul>
+
+          </section>
+
+          <br>
+          <!-- Next Page -->
+          <div class="pagination-box">
+            <button class="pagination-button" data-nav-link data-target-section="projects">Next ></button>
+          </div>
+
+      </article>
+
+
+      <!--
+        - #Projects
+      -->
+      <article class="projects" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">My Projects</h2>
+        </header>
+
+        <section class="projects notranslate">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>AI</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Utils</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Other</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>AI</button>
+              </li>
+              
+              <li class="select-item">
+                <button data-select-item>Utils</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Other</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="utils">
+              <a href="https://github.com/K1rsN7/SubManager">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/SubManager/blob/main/img/banner.jpg?raw=true" loading="lazy">
+                </figure>
+              </a>
+              <h3 class="project-title">SubManage</h3>
+              <p class="project-category">Utils</p>
+              <p class="project-category">Solo Development</p>
+              <p class="project-development">Python</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/SubManager">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="utils">
+              <a href="https://github.com/K1rsN7/SchoolProject">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/SchoolProject/blob/main/banner.png?raw=true" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">Quadratic Equations</h3>
+              <p class="project-category">Calculator & Generator</p>
+              <p class="project-category">Solo Development</p>
+              <p class="project-development">Python</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/SchoolProject">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="other">
+              <a href="https://github.com/K1rsN7/TechHaven">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/TechHaven/blob/master/img/office2.jpg?raw=true" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">TechHaven</h3>
+              <p class="project-category">Complete Build</p>
+              <p class="project-category">Solo Development</p>
+              <p class="project-development">JS | PHP | PostgreSQL</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/TechHaven">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li>
+            
+            <li class="project-item active" data-filter-item data-category="utils">
+              <a href="https://github.com/K1rsN7/TrackDistributo">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/TrackDistributor/raw/main/banner.png?raw=true" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">Track Distributor</h3>
+              <p class="project-category">Utils</p>
+              <p class="project-category">Solo Development</p>
+              <p class="project-development">Python</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/TrackDistributor">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="ai">
+              <a href="https://github.com/K1rsN7/Mushroom_Guide">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/Mushroom_Guide/raw/main/banner.png" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">Mushroom Guide</h3>
+              <p class="project-category">AI telegram bot</p>
+              <p class="project-category">Solo Development</p>
+              <p class="project-development">Python | Telegram</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/Mushroom_Guide">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li>
+            
+            <li class="project-item active" data-filter-item data-category="other">
+              <a href="https://github.com/K1rsN7/Iron_Event">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/UP02/raw/main/image.png" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">Iron Event</h3>
+              <p class="project-category">Desktop application</p>
+              <p class="project-category">Solo Development</p>
+              <p class="project-development">Java | MySQL</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/Iron_Event">
+                  <ion-icon name="logo-github"></ion-icon> GitHub new
+                </a>
+                <a href="https://github.com/K1rsN7/Competition-organization">
+                  <ion-icon name="logo-github"></ion-icon> GitHub old
+                </a>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="ai">
+              <a href="https://github.com/K1rsN7/SportScanAI">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/SportScanAI/raw/master/banner.png" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">SportScanAi</h3>
+              <p class="project-category">AI scanner for cheaters</p>
+              <p class="project-category">Team Project</p>
+              <p class="project-development">Python | CatBoost | Docker</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/SportScanAI">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="other">
+              <a href="https://github.com/K1rsN7/hackathon_IT_space_2022">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/hackathon_IT_space_2022/raw/main/image1.png" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">IT Space 2022</h3>
+              <p class="project-category">A mobile game about MTS</p>
+              <p class="project-category">Team Project</p>
+              <p class="project-development">C# | Unity</p>
+              <div class="project-buttons disabled">
+                <a href="">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="ai">
+              <a href="https://github.com/K1rsN7/Acceptance-of-documents">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/Acceptance-of-documents/raw/main/banner.png" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">Acceptance of documents</h3>
+              <p class="project-category">AI document scanner</p>
+              <p class="project-category">Team Project</p>
+              <p class="project-development">Python</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/Acceptance-of-documents">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="ai">
+              <a href="https://github.com/K1rsN7/HackAI2023">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/HackAI2023/raw/main/banner.png" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">AI assistant for drivers</h3>
+              <p class="project-category">Voice assistant for drivers</p>
+              <p class="project-category">Team Project</p>
+              <p class="project-development">Python</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/HackAI2023">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="ai">
+              <a href="https://github.com/K1rsN7/Defect-Detection">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/Defect-Detection/raw/master/defect%20sense%20ai.png?raw=true" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">Defect Sense AI</h3>
+              <p class="project-category">Detection of defects</p>
+              <p class="project-category">Team Project</p>
+              <p class="project-development">Python</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/Defect-Detection">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="ai">
+              <a href="https://github.com/K1rsN7/Kaggle-Solutions">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/Kaggle-Solutions/raw/main/banner.png" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">Kaggle Solutions</h3>
+              <p class="project-category">All competition decisions</p>
+              <p class="project-category">Solo Development</p>
+              <p class="project-development">Python</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/Kaggle-Solutions">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+                <a href="https://github.com/K1rsN7/Kaggle-Solutions">
+                  <ion-icon name="person-outline"></ion-icon> Kaggle
+                </a>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="ai">
+              <a href="https://github.com/K1rsN7/BusinessLunchGAN">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/BusinessLunchGAN/raw/master/banner.png" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">PixelGAN</h3>
+              <p class="project-category">Video quality improvements</p>
+              <p class="project-category">Team Project</p>
+              <p class="project-development">Python</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/BusinessLunchGAN">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="other">
+              <a href="https://github.com/K1rsN7/Escape_from_the_desert">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/Escape_from_the_desert/raw/master/banner.png" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">Escape from desert</h3>
+              <p class="project-category">Escape Console Game</p>
+              <p class="project-category">Solo Development</p>
+              <p class="project-development">Java</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/Escape_from_the_desert">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="">
+              <a href="https://github.com/K1rsN7/TerraWing">
+                <figure class="project-img loading">
+                  <img data-src="https://github.com/K1rsN7/TerraWing/raw/master/logo.png" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title">TerraWing</h3>
+              <p class="project-category">Recognizing obstacles on the way</p>
+              <p class="project-category">Team Project</p>
+              <p class="project-development">Python</p>
+              <div class="project-buttons disabled">
+                <a href="https://github.com/K1rsN7/TerraWing">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li>
+            
+
+            <!-- <li class="project-item active" data-filter-item data-category="">
+              <a href="">
+                <figure class="project-img loading">
+                  <img data-src="" loading="lazy">
+                </figure>
+              </a>
+            <h3 class="project-title"></h3>
+              <p class="project-category"></p>
+              <p class="project-category"></p>
+              <p class="project-development"></p>
+              <div class="project-buttons disabled">
+                <a href="">
+                  <ion-icon name="logo-github"></ion-icon> GitHub
+                </a>
+              </div>
+            </li> -->
+          </ul>
+
+          <!-- Next Page -->
+          <div class="pagination-box">
+            <button class="pagination-button" data-nav-link data-target-section="certificates">Next ></button>
+          </div>
+
+        </section>
+
+      </article>
+
+      <!-- Certificates -->
+      <article class="certificates" data-page="certificates">
+
+        <header>
+          <h2 class="h2 article-title">My Certificates</h2>
+        </header>
+
+
+        <br><br>
+
+        <!-- Group 1 -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="desktop-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">IT competitions</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Participation in the district hackathon in Omsk 7th place</h4>
+              <p class="timeline-text">
+                Digital Breakthrough
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/Digital breakthrough 08.09.2024.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">3rd place in the final of the international hackathon competence “AI-sporttech - SportTechCup 2024”</h4>
+              <p class="timeline-text">
+                IT-Planeta
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/3 place SportScanAi 18.05.2024.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">GARAGE STARTUP SPRINT Grocery Hackathon</h4>
+              <p class="timeline-text">
+                Sber
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/Garage startup sprint 01.03.2024.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">International online Hackathon "Digital transformation of agriculture"</h4>
+              <p class="timeline-text">
+                HSE
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/The digital transformation of agriculture 2024.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Participation in the ATOMIC HACK hackathon in Nizhny Novgorod 11th place</h4>
+              <p class="timeline-text">
+                Rosatom
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/Atomic hack 17.12.2023.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+            
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Participation in the international hackathon in Moscow</h4>
+              <p class="timeline-text">
+                Digital Breakthrough
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/Digital Breakthrough 26.11.2023.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Winners of the international online hackathon "Smart City. Smart Home"</h4>
+              <p class="timeline-text">
+                HSE
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/HSE Smart Sity 24.11.2023.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Participation in the round-robin hackathon in Sochi 12th place</h4>
+              <p class="timeline-text">
+                Digital Breakthrough
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/Digital breakthrough 15.10.2023.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Participation in the round-robin hackathon in Khabarovsk 5th place</h4>
+              <p class="timeline-text">
+                Digital Breakthrough
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/Digital breakthrough 24.09.2023.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Participation in the All-Russian hackathon 17th place</h4>
+              <p class="timeline-text">
+                Digital Breakthrough
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/Digital breakthrough 10.09.2023.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">ML Hackathon: Utashuda's Wild Life</h4>
+              <p class="timeline-text">
+                AI ARROW
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/The wild life of Utashud 27.08.2023.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">International Olympiad "IT Planet 2023" in the Postgres Professional competition</h4>
+              <p class="timeline-text">
+                IT Planet
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/IT-planeta 2023.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Interregional scientific and technical hackathon on programming in Python and Java</h4>
+              <p class="timeline-text">
+                IT CUBE 
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/IT Cube hack 2022.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Diploma of the participant of the qualification stage in the competence of "Game Designer"</h4>
+              <p class="timeline-text">
+                Art masters
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/game-designer 01.06.2022.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Interregional hackathon "IT Space" on the topic "Mobile game development"</h4>
+              <p class="timeline-text">
+                MTS
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/IT Space 2022.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Participation in the intellectual duel "IT-sprint"</h4>
+              <p class="timeline-text">
+                IT Cube & NRTK
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/IT-sprint 2022.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Diploma for the first place in the IT Quiz tournament</h4>
+              <p class="timeline-text">
+                IT Cube
+              </p>
+
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/it-kviz 2021.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+           
+          </ol>
+
+          <br><br>
+
+          <!-- Group 2 -->
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="laptop-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">IT exams</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Demo exam on desktop applications</h4>
+              <p class="timeline-text">
+                Test
+              </p>
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/demo exam 24.12.2024.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Demo exam on Machine Learning and Big Data</h4>
+              <p class="timeline-text">
+                Test
+              </p>
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/demo exam 13.12.2023 .png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Certificate Introduction to Data Science and Machine Learning </h4>
+              <p class="timeline-text">
+                Stepik
+              </p>
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/Certificate Introduction to Data Science and Machine Learning 25.01.2023.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Participant of the Winter School of Computer Science</h4>
+              <p class="timeline-text">
+                HSE
+              </p>
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/HSE winter school 2022.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Python Test Certificate</h4>
+              <p class="timeline-text">
+                GeekBrains
+              </p>
+              <div class="certificate-container">
+                <img src="./assets/images/certificates/Python Test Certificate 5.12.2022.png" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+          </ol>
+
+          <br><br> 
+          <!-- Group 3 -->
+          <!-- <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="language-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Language Proficiency</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">
+                English Language A2</h4>
+              <p class="timeline-text">
+                Author
+              </p>
+              <div class="certificate-container">
+                <img src="" onclick="window.open(this.src)">
+              </div>
+
+            </li>
+
+          </ol> -->
+
+          <!-- Next Page -->
+          <div class="pagination-box">
+            <button class="pagination-button" data-nav-link data-target-section="contact">Next ></button>
+          </div>
+
+        </section>
+
+      </article>
+
+      <!-- CONTACT-->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <!-- Copy Email Address -->
+        <div class="content-card">
+          <h3 class="h3 form-title" align="center">Email:</h3>
+          <div class="container">
+            <div class="email-field">
+              <div class="email-text">k1rsn7@mail.ru</div>
+              <button class="copy-button" onclick="copyEmail(event)">Copy</button>
+            </div>
+          </div>
         </div>
-    </section>
+        <br>
 
-   <!-- portfolio section -->
-   <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Project</span><span class="animate scroll" style="--i:1;"></span></h2>
 
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="assets/img/car detection.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Car Object Detection using YOLOv8</h4>
-                    <p>Practical application of the YOLOv8 model for detection of certain vehicles </p>
-                    </i><a href="https://www.kaggle.com/code/k1rsn7/en-car-object-detection-using-yolov8"><i class='bx bx-link-external'></i></a>
-                </div>
-                <span class="animate scroll" style="--i:2;"></span>
-            </div>
-    
-            <div class="portfolio-box">
-                <img src="assets/img/smart_barrier.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Recognition of government vehicles</h4>
-                    <p>Classification of images into government agency vehicles and conventional vehicles</p>
-                    </i><a href="https://www.kaggle.com/code/k1rsn7/en-recognition-of-government-vehicles-98"><i class='bx bx-link-external'></i></a>
-                </div>
-                <span class="animate scroll" style="--i:3;"></span>
-            </div>
-    
-            <div class="portfolio-box">
-                <img src="assets/img/house price.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Housing Price Prediction Data</h4>
-                    <p>Predicting the price of a house depending on its features</p>
-                    </i><a href="https://www.kaggle.com/code/k1rsn7/en-housing-price-prediction-data"><i class='bx bx-link-external'></i></a>
-                </div>
-                <span class="animate scroll" style="--i:4;"></span>
-            </div>
-    
-            <div class="portfolio-box">
-                <img src="assets/img/fake news.png" alt="">
-                <div class="portfolio-layer">
-                    <h4> Fake and real Russian news </h4>
-                    <p>Classification of news into true and fake news</p>
-                    </i><a href="https://www.kaggle.com/code/k1rsn7/en-fake-and-real-russian-news-accuracy-95"><i class='bx bx-link-external'></i></a>
-                </div>
-                <span class="animate scroll" style="--i:5;"></span>
-            </div>
-    
-            <div class="portfolio-box">
-                <img src="assets/img/android-malware.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Android Malware Detection</h4>
-                    <p>Recognizing malicious Android apps by instances and attributes.</p>
-                    </i><a href="https://www.kaggle.com/code/k1rsn7/en-android-malware-detection-99-5521"><i class='bx bx-link-external'></i></a>
-                </div>
-                <span class="animate scroll" style="--i:6;"></span>
-            </div>
-    
-            <div class="portfolio-box">
-                <img src="assets/img/car-brands.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>Car brand recognition</h4>
-                    <p>Application of computer vision to vehicle brand identification.</p>
-                    </i><a href="https://www.kaggle.com/code/k1rsn7/en-60-000-images-of-cars"><i class='bx bx-link-external'></i></a>
-                </div>
-                <span class="animate scroll" style="--i:7;"></span>
-            </div>
+        <!-- Social Links -->
+        <div class="content-card">
+          <h3 class="h3 form-title" align="center">Socials:</h3>
+
+          <ul class="social-list">
+
+            <li class="social-item">
+              <a href="https://github.com/K1rsN7" class="socials-item">
+                <img src="./assets/images/socials/github.png"></img>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://t.me/K1rsN7" class="socials-item">
+                <img src="./assets/images/socials/telegram.png"></img>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://vk.com/K1rsN7" class="socials-item">
+                <img src="./assets/images/socials/vk.png"></img>
+              </a>
+            </li>
+
+          </ul>
         </div>
-   </section>
+        <br>
 
-   <!-- contact design -->
-   <!-- <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span><span class="animate scroll" style="--i:1;"></span></h2>
-        <form class="submit-to-google-sheet">
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="text" name="Name" placeholder="Full Name" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input type="email" name="Email" placeholder="Email Address" required>
-                    <span class="focus"></span>
-                </div>
-                <span class="animate scroll" style="--i:2;"></span>
-            </div>
+      </article>
 
-            <div class="input-box">
-                <div class="input-field">
-                    <input type="number" name="Phone" placeholder="Mobile Number" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input type="text" name="Subject" placeholder="Email Subject" required>
-                    <span class="focus"></span>
-                </div>
-                <span class="animate scroll" style="--i:3;"></span>
-            </div>
+    </div>
 
-            <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" name="Message" placeholder="Your Message" required></textarea>
-                <span class="focus"></span>
-                <span class="animate scroll" style="--i:4;"></span>
-            </div>
+  </main>
 
-            <div class="btn-box btns" align="center">
-                <button type="submit" class="btn">Submit</button>
-                <span class="animate scroll" style="--i:5;"></span>
-            </div>
-        </form>
-        <span id="msg"></span>
-   </section> -->
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
 
-    <!-- footer design -->
-    <footer class="footer">
-        <div class="footer-text">
-            <p>If you'd like to chat, message me at <a href="https://t.me/K1rsN7">Telegram✈️</a> </p>
-            <span class="animate scroll" style="--i:1;"></span>
-        </div>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-        <div class="footer-iconTop">
-            <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
-            <span class="animate scroll" style="--i:3;"></span>
-        </div>
-    </footer>
-    <script src="script.js"></script>
 </body>
+
 </html>
